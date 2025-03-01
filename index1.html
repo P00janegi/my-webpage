@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanned Objects Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 10px;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .object-info {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Scanned Objects Information</h1>
+
+    <!-- Display current date and time -->
+    <div id="date-time">
+        <h2>Current Date and Time: <span id="current-date-time"></span></h2>
+    </div>
+
+    <!-- Information for the scanned objects -->
+    <!--  
+    <div class="container">
+        <h3>Scanned Objects:</h3>
+        <div id="object1" class="object-info"></div>
+        <div id="object2" class="object-info"></div>
+        <div id="object3" class="object-info"></div>
+        <div id="object4" class="object-info"></div>
+    </div>-->
+
+    <script>
+        // Get the current date and time
+        const currentDateTime = new Date().toLocaleString();
+        document.getElementById('current-date-time').innerText = currentDateTime;
+
+        // Simulate data for four objects scanned (these could be dynamically updated from the server)
+        //const objectData = [
+           // { id: 'Object 1', description: 'Description for object 1' },
+            //{ id: 'Object 2', description: 'Description for object 2' },
+            //{ id: 'Object 3', description: 'Description for object 3' },
+            //{ id: 'Object 4', description: 'Description for object 4' }
+        //];
+
+        // Display the data for each object
+        objectData.forEach((obj, index) => {
+            document.getElementById('object' + (index + 1)).innerHTML = 
+                `<strong>${obj.id}</strong><br>${obj.description}<br><br>`;
+        });
+    </script>
+
+</body>
+</html>
